@@ -9,10 +9,6 @@
   max-width: 986px;
   margin: 0 auto;
 }
-.container .project:nth-child(2) .project__info {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
 
 /** NAVBAR **/
 .nav {
@@ -32,6 +28,12 @@
   transition: 0.3s;
 }
 
+@media (min-width: 768px) {
+  .project:nth-child(even) .project__info {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
 /** PROJECTS **/
 .project {
   display: grid;
@@ -66,6 +68,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 1em;
 }
 @media (max-width: 992px) {
   .project .project__info {
@@ -102,7 +105,6 @@
 }
 .project .project__info .project__description {
   font-weight: 500;
-  max-width: 80%;
 }
 .project .project__info .project__techs {
   display: flex;
@@ -120,6 +122,24 @@
   min-width: 3em;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
+}
+
+/** SKILLS **/
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.skills img {
+  width: 100%;
+  max-width: 70px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+  .skills img {
+    max-width: 50px;
+  }
 }
 
 /** CONTACT **/
@@ -160,7 +180,7 @@
   transition: 0.8s;
   outline: none;
 }
-.contact .float .form__item:valid ~ .form__label, .contact .float .form__item:focus ~ .form__label {
+.contact .float .form__item:not(:placeholder-shown) ~ .form__label, .contact .float .form__item:focus ~ .form__label {
   top: 0;
   font-size: 0.8em;
   color: #161623;
