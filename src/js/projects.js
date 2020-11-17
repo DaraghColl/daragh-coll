@@ -3,9 +3,8 @@ export default [
     title: 'Web Builder',
     description: 'No code build and deploy website - in development',
     tech: ['javascript', 'html', 'scss', 'parcel', 'firebase'],
-    github: 'https://www.github.com',
-    demo: 'nxnw-jamstack.netlfy.app',
-    image: '/web-builder.f648f3f4.PNG',
+    demo: 'https://web-editor.netlify.app/',
+    image: require('../../public/assets/web-builder.png'),
   },
   {
     title: 'NXNW Jamstack',
@@ -22,7 +21,7 @@ export default [
     ],
     github: 'https://www.github.com',
     demo: 'https://nxnw-jam.netlify.app/',
-    image: '/nxnw-jamstack.b9506e2b.png',
+    image: require('../../public/assets/nxnw-jamstack.png'),
   },
   {
     title: 'Conor Kelly',
@@ -31,7 +30,7 @@ export default [
     tech: ['gridsome', 'scss', 'forestry io', 'netlify'],
     github: 'https://www.github.com',
     demo: 'https://conor-kelly.netlify.app/',
-    image: 'conor-kelly.37bfc6a2.png',
+    image: require('../../public/assets/conor-kelly.png'),
   },
   {
     title: 'Daragh Coll Portfolio',
@@ -39,6 +38,6 @@ export default [
     tech: ['javascript', 'html', 'scss', 'parcel'],
     github: 'https://www.github.com',
     demo: 'https://conor-kelly.netlify.app/',
-    image: '/daragh-coll.84772cc2.png',
+    image: require('../../public/assets/daragh-coll.png'),
   },
 ];

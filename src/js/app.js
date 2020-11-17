@@ -16,9 +16,7 @@ projects.forEach((project) => {
                 <div class="project__info-header">
                     <div class="project__header">
                     <h1 class="project__title">${project.title}</h1>
-                    <a class=" project__link project__code" href="${
-                      project.github
-                    }" target="blank">Github</a>
+                    ${test(project)}
                     <a class="project__link project__demo" href="${
                       project.demo
                     }" target="blank">Demo</a>
@@ -36,4 +34,15 @@ projects.forEach((project) => {
         </div>
     `;
   projectsList.insertAdjacentHTML('beforeend', markup);
+  if (!project.github) {
+  }
 });
+
+function test(project) {
+  if (!!project.github) {
+    return `
+      <a class=" project__link project__code" href="${project.github}" target="blank">Github</a>`;
+  } else {
+    return '';
+  }
+}
