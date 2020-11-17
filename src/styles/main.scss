@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import './variables.scss';
+
+* {
+    font-family: 'Roboto',
+        sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    max-width: 986px;
+    margin: 0 auto;
+
+    // info
+    .project:nth-child(2) {
+        .project__info {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+    }
+}
+
+/** NAVBAR **/
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav__item {
+        text-decoration: none;
+        font-size: 1.3em;
+        margin-right: 0.5em;
+        color: inherit;
+        border-bottom: 4px solid transparent;
+        transition: 0.3s;
+
+        &:hover {
+            border-bottom: 4px solid $secondary;
+            transition: 0.3s;
+        }
+    }
+}
+
+/** PROJECTS **/
+.project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    margin-bottom: 4em;
+
+    @media (max-width: $screen-sm) {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        box-shadow: $shadow;
+    }
+
+    .project__image {
+        background: $secondary;
+        display: flex;
+        align-items: center;
+        border-radius: $border-medium;
+        padding: 1em;
+        transition: 0.5s;
+
+        @media (max-width: $screen-md) {
+            border-radius: 5px 5px 0 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .project__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @media (max-width: $screen-md) {
+            padding: 1em;
+        }
+
+        @media (max-width: $screen-sm) {
+            font-size: 0.8em;
+        }
+
+        .project__header {
+            display: flex;
+            align-items: baseline;
+
+            .project__title {
+                margin-bottom: 0;
+                margin-right: 0.5em;
+            }
+
+            .project__link {
+                display: flex;
+                margin-right: 0.5em;
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                transition: 0.3s;
+
+                &:hover {
+                    border-bottom: 2px solid $secondary;
+                    transition: 0.3s;
+                }
+            }
+
+            .project__link-img {
+                width: 1.5em;
+            }
+        }
+
+        .project__description {
+            font-weight: 500;
+            max-width: 80%;
+        }
+
+        .project__techs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1em;
+
+            .project__tech {
+                background: $grey_medium;
+                color: $primary;
+                border-radius: $border-light;
+                font-weight: bold;
+                text-align: center;
+                font-size: 0.8em;
+                padding: 0.3em 1em;
+                min-width: 3em;
+                margin-right: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+}
+
+/** CONTACT **/
+.contact {
+    max-width: $screen-sm;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+
+    h1 {
+        text-align: center;
+    }
+
+    /* input wrapper */
+    .float {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        display: block;
+        padding-top: 0.9375rem;
+        margin-bottom: 1.25rem;
+        position: relative;
+
+        /* input */
+        .form__item {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $grey_light;
+            border-radius: 0;
+            outline: none;
+            height: 1em;
+            width: 100%;
+            margin: 0 0 8px 0;
+            padding: 0 0 0.5em 0;
+
+            &:focus {
+                border-bottom: 2px solid $secondary;
+                transition: 0.8s;
+                outline: none;
+            }
+
+            &:valid,
+            &:focus {
+                &~.form__label {
+                    top: 0;
+                    font-size: 0.8em;
+                    color: $primary;
+                    transition: 0.2s;
+                }
+            }
+        }
+
+        .form__label {
+            width: 100%;
+            color: $black;
+            left: 0.75rem;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            font-size: 1em;
+            transition: 0.2s;
+            cursor: text;
+        }
+
+        .form__message {
+            height: 1.7em;
+
+            &:valid,
+            &:focus {
+                &~.form__label {
+                    top: -5px;
+                }
+            }
+        }
+    }
+
+    /* submit button */
+    .submit-form {
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.3s;
+
+        button {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-width: 100px;
+
+            .submit-icon {
+                margin-left: 1em;
+
+                path {
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+            &:hover {
+                .submit-icon {
+                    path {
+                        fill: $secondary;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* floating class for email invalid & not focused  */
+.label-floated {
+    top: 0 !important;
+    font-size: 0.8em !important;
+    color: $secondary !important;
+    transition: 0.2s;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    // horizontal line
+    .section__underline {
+        background: $secondary;
+        border-radius: 3px;
+        width: 8em;
+        height: 0.5em;
+        margin-bottom: 2em;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary;
+    color: $white;
+    border: 2px solid $secondary;
+    padding: 0.4em;
+    border-radius: $border-light;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $white;
+        color: $secondary;
+        border: 2px solid $secondary;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="/app.5f3f5240.css"></head>
+
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="#" class="nav__item">Daragh Coll</a>
+        </div>
+        <div class="nav__links">
+          <a href="#_section_projects" class="nav__item">Projects</a>
+          <a href="#_section_contact" class="nav__item">Contact</a>
+        </div>
+      </nav>
+
+      <!-- PROJECTS -->
+      <section id="_section_projects">
+        <div class="section-heading">
+          <div>
+            <h1>Projects</h1>
+            <div class="section__underline"></div>
+          </div>
+        </div>
+        <div class="projects" id="_projects__list"></div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="_section_contact" class="contact">
+        <div class="section-heading">
+          <div>
+            <h1>Contact</h1>
+            <div class="section__underline"></div>
+          </div>
+        </div>
+        <form id="contact-form" class="contact__form" name="contact" autocomplete="off">
+          <!-- name -->
+          <div class="float">
+            <input id="contact_name" class="form__item" type="text" name="from_name" required="">
+            <label for="contact_name" class="form__label">Name</label>
+          </div>
+
+          <!-- email -->
+          <div class="float">
+            <input id="contact_email" class="form__item" type="email" name="from_email" required="">
+            <label for="contact_email" class="form__label">Email</label>
+          </div>
+
+          <!-- message -->
+          <div class="float">
+            <textarea id="contact_message" class="form__item form__message" name="message" required=""></textarea>
+            <label for="contact_message" class="form__label">Message</label>
+          </div>
+          <div class="submit-form">
+            <button class="btn-secondary" type="submit">
+              Send
+              <svg class="submit-icon" fill="none" height="24" width="24">
+                <path d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6ZM5.51859 6L12 11.6712L18.4814 6H5.51859ZM20 7.32877L12.6585 13.7526C12.2815 14.0825 11.7185 14.0825 11.3415 13.7526L4 7.32877V18H20V7.32877Z" fill="#fff"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="/app.5f3f5240.js"></script>
+  </body>
+</html>

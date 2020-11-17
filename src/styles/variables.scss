@@ -1,0 +1,23 @@
+// breakpoints
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1400px;
+
+/** colors **/
+$primary: #161623;
+$secondary: #145DC7;
+$accent: #EB3D10;
+$white: #fff;
+$black: #000;
+$grey_light: #ccc;
+$grey_medium: #e2e8f0;
+
+// border-radius
+$border-light: 2px;
+$border-medium: 5px;
+
+// box-shadow
+$shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+0 4px 6px -2px rgba(0, 0, 0, 0.05);
