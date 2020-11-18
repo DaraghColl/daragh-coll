@@ -21,7 +21,7 @@ projects.forEach((project) => {
                       project.demo
                     }" target="blank">Demo</a>
                     </div>
-                    <h4 class="project__description">${project.description}</h4>
+                    <h2 class="project__description">${project.description}</h2>
                     <div class="project__techs">
                     ${project.tech
                       .map(
