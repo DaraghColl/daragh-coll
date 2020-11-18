@@ -332,6 +332,10 @@
             }
         }
     }
+
+    .honeypot {
+        visibility: hidden;
+    }
 }
 
 /* floating class for email invalid & not focused  */

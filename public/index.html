@@ -122,6 +122,10 @@
           class="contact__form"
           name="contact"
           autocomplete="off"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
         >
           <!-- name -->
           <div class="float">
@@ -160,8 +164,21 @@
             ></textarea>
             <label for="contact_message" class="form__label">Message</label>
           </div>
+
+          <!-- honeypot field -->
+          <div class="honeypot">
+            <input name="bot-field" />
+            <label for="contact_email" class="form__label"
+              >dont fill out this field if human</label
+            >
+          </div>
+
+          <!-- recaptcha -->
+          <div data-netlify-recaptcha="true"></div>
+
+          <!-- submit -->
           <div class="submit-form">
-            <button class="btn-secondary" type="submit">
+            <button type="submit" class="btn-secondary" type="submit">
               Send
               <svg class="submit-icon" fill="none" height="24" width="24">
                 <path
