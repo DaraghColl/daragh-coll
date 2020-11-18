@@ -10,13 +10,13 @@ projects.forEach((project) => {
         <div class="project">
         <!-- image -->
             <div class="project__image">
-                <img src="${project.image}" alt="" srcset=""/>
+                <img loading="lazy" src="${project.image}" alt="" srcset=""/>
             </div>    
             <div class="project__info">
                 <div class="project__info-header">
                     <div class="project__header">
                     <h1 class="project__title">${project.title}</h1>
-                    ${test(project)}
+                    ${gitLink(project)}
                     <a class="project__link project__demo" href="${
                       project.demo
                     }" target="blank">Demo</a>
@@ -38,10 +38,10 @@ projects.forEach((project) => {
   }
 });
 
-function test(project) {
+function gitLink(project) {
   if (!!project.github) {
     return `
-      <a class=" project__link project__code" href="${project.github}" target="blank">Github</a>`;
+      <a class="project__link project__code" href="${project.github}" target="blank">Github</a>`;
   } else {
     return '';
   }
