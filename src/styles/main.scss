@@ -105,7 +105,7 @@
 .project {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3em;
+    column-gap: 3em;
 
     &:not(:first-child) {
         margin-top: 5em;
@@ -113,14 +113,12 @@
 
     @media (max-width: $screen-sm) {
         grid-template-columns: 1fr;
-        grid-gap: 1em;
         box-shadow: $shadow;
     }
 
     .project__image {
         background: $secondary;
         display: flex;
-        align-items: center;
         border-radius: $border-medium;
         padding: 1em;
         transition: 0.5s;
@@ -178,7 +176,8 @@
 
         .project__description {
             font-weight: 500;
-            font-size: 1.2em;
+            font-size: 1em;
+            line-height: 1.4;
         }
 
         .project__techs {
@@ -190,13 +189,16 @@
                 background: $grey_medium;
                 color: $primary;
                 border-radius: $border-light;
-                font-weight: bold;
                 text-align: center;
-                font-size: 0.8em;
+                font-size: 1em;
                 padding: 0.3em 1em;
                 min-width: 3em;
                 margin-right: 0.5em;
                 margin-bottom: 0.5em;
+            }
+
+            @media (max-width: $screen-sm) {
+                margin-top: 1.5em;
             }
         }
     }

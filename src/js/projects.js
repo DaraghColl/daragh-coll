@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Web Builder',
-    description: 'No code build and deploy website - in development',
+    description: 'No code build and deploy website - early development',
     tech: ['javascript', 'html', 'scss', 'parcel', 'firebase'],
     demo: 'https://web-editor.netlify.app/',
     image: require('../../public/assets/web-builder.webp'),
