@@ -316,6 +316,7 @@
     .submit-form {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         transition: 0.3s;
         margin-bottom: 1em;
 
@@ -330,8 +331,8 @@
             min-width: 100px;
 
             @media (max-width: $screen-sm) {
-                align-self: flex-end;
-
+                align-self: center;
+                margin-top: 1em;
             }
 
             .submit-icon {
