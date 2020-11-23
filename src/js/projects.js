@@ -19,7 +19,7 @@ export default [
       'lambda',
       'email JS',
     ],
-    github: 'https://www.github.com',
+    github: 'https://github.com/DaraghColl/NXNW-jamstack-demo-app',
     demo: 'https://nxnw-jam.netlify.app/',
     image: require('../../public/assets/nxnw-jamstack.webp'),
   },
@@ -28,7 +28,7 @@ export default [
     description:
       'Devloper site to showcase developer skills, projects, & code tutorials / snippets - in development',
     tech: ['gridsome', 'scss', 'forestry io', 'netlify'],
-    github: 'https://www.github.com',
+    github: 'https://github.com/DaraghColl/conor-kelly-developer-site',
     demo: 'https://conor-kelly.netlify.app/',
     image: require('../../public/assets/conor-kelly.webp'),
   },
@@ -36,8 +36,8 @@ export default [
     title: 'Daragh Coll Portfolio',
     description: 'This Site',
     tech: ['javascript', 'html', 'scss', 'parcel'],
-    github: 'https://www.github.com',
-    demo: 'https://conor-kelly.netlify.app/',
+    github: 'https://github.com/DaraghColl/daragh-coll',
+    demo: 'https://www.daraghcoll.com/',
     image: require('../../public/assets/daragh-coll.webp'),
   },
 ];
