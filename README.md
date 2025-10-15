@@ -1,4 +1,4 @@
-# Personal Website
+![Website Screenshot](./src/assets/website-screenshot.png)
 
 This is the source code for my personal website, built with React, TypeScript, Vite, and Tailwind CSS.
 
