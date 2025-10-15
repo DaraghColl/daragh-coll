@@ -91,7 +91,10 @@ const Landing = () => {
           transition={{ duration: 0.5, delay: 0.75 }}
           className="max-w-lg px-4 text-lg text-neutral-700 lg:text-2xl"
         >
-          Full stack software engineer, specializing in front end development, design and animation
+          Full stack software engineer, specializing in front end development, design and{' '}
+          <span className="animate-gradient bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-400 bg-clip-text text-2xl font-bold text-transparent">
+            animation
+          </span>
         </motion.p>
       </div>
     </section>
